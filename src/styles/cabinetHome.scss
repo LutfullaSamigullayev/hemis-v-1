@@ -1,0 +1,72 @@
+.cabinetHome {
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px;
+  color: white;
+
+  .about {
+    @include flex();
+    gap: 40px;
+    padding: 30px 40px;
+    background-color: black;
+    border-radius: 12px;
+
+    &__content {
+      @include flex(flex-start, space-around);
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 26px;
+        font-weight: 400;
+      }
+    }
+    &__img {
+      img {
+        width: 300px;
+        height: 100%;
+      }
+    }
+  }
+  .statics {
+    @include flex(stretch, space-between);
+    width: 100%;
+    gap: 14px;
+    &__room {
+      @include flex(center, center);
+      flex-direction: column;
+      width: 100%;
+      background-color: black;
+      border-radius: 12px;
+      padding: 30px;
+      font-weight: 400;
+      .title {
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 12px;
+      }
+      .border {
+        width: 100%;
+        border: 2px solid white;
+        border-radius: 4px;
+      }
+      .item {
+        @include flex();
+        padding: 14px 10px;
+        gap: 20px;
+
+        h3 {
+          font-size: 25px;
+          line-height: 32px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

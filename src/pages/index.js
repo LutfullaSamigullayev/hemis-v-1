@@ -1,0 +1,9 @@
+export { Home } from './home';
+export { Cabinet } from './cabinet';
+export { CabinetHome } from './cabinetHome';
+export { Student } from './student';
+export { Module } from './module';
+export { Timetable } from './timetable';
+export { Statistic } from './statistic';
+export { StudentCard } from './studentCard';
+export { Events } from './events';

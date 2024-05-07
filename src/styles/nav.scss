@@ -1,0 +1,35 @@
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 48px 0;
+  @include flex(center, space-between);
+  flex-direction: column;
+  width: 340px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  .logo {
+    padding: 0 auto;
+  }
+  &__menu {
+    width: 100%;
+    padding: 40px 0;
+    flex: 1 1 auto;
+    .active {
+      background: linear-gradient(
+        90.25deg,
+        #d9d9d9 -3.29%,
+        rgba(217, 217, 217, 0) 105.25%
+      );
+    }
+    li {
+      padding: 20px 60px;
+    }
+  }
+  .singout {
+    padding: 0 auto;
+  }
+}

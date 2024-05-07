@@ -1,0 +1,56 @@
+.studentCard {
+    width: 100%;
+    // height: 100%;
+    margin-top: 80px;
+    @include flex(center, center);
+
+    .idCard {
+        width: 660px;
+
+        .title {
+            position: relative;
+            background-color: black;
+            color: white;
+            padding: 30px 20px;
+            @include flex(center, flex-end);
+
+            img {
+                position: absolute;
+                left: 0;
+                width: 136px;
+                transform: translate(50%,50%);
+                border: 5px solid white;
+                border-radius: 50%;
+            }
+        }
+        .content {
+            background-color: #FCFCFC;
+            h2 {
+                font-size: 34px;
+                text-align: center;
+                transform: translate(50px, 20px);
+            }
+            &__date {
+                @include flex(center,space-between);    
+                gap: 10px;
+                padding: 20px 30px;
+                margin-top: 50px;
+                div {
+                    content: '';
+                    height: 60px;
+                    border: 2px solid black;
+                    border-radius: 4px;
+                }
+                li {
+                    padding: 4px 0;
+                    &:nth-last-child(even) {
+                        color: #858585;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

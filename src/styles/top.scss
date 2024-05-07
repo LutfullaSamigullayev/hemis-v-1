@@ -1,0 +1,22 @@
+.top {
+  width: 100%;
+  padding: 60px 120px;
+  @include flex(center, space-between);
+  gap: 20px;
+  input {
+    width: 400px;
+    background-color: #131313;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    &::placeholder {
+      opacity: 1;
+      color: white;
+    }
+  }
+
+  &__right {
+    @include flex(center, center);
+    gap: 40px;
+  }
+}

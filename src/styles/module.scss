@@ -1,0 +1,10 @@
+.module {
+  width: 100%;
+
+  padding: 10px;
+  &__cards {
+    @include flex(flex-start, center);
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
