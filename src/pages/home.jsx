@@ -1,13 +1,13 @@
-import { Header, Button, Footer, Copyright } from "../components";
-import { Icons } from "../components";
+import { useState } from "react";
+import { Header, Button, Footer, Copyright, Icons } from "../components";
 
 export function Home() {
-  const bannerInfo = [
+  const [bannerInfo, setbannerInfo] = useState([
     { id: 1, title: "Coure to choose from", number: "80+" },
     { id: 2, title: "Years of experience", number: "40" },
     { id: 3, title: "Highest grade at MEC", number: "10/10" },
     { id: 4, title: "Graduated students", number: "50.000" },
-  ];
+  ]);
 
   return (
     <>

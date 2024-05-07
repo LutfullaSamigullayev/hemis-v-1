@@ -7,8 +7,8 @@ export function Header() {
     { id: 2, title: "About", link: "#" },
     { id: 3, title: "Courses", link: "#" },
     { id: 4, title: "Contact", link: "#" },
-    { id: 5, title: "Log In", link: "#" },
-    { id: 6, title: "Sign Un", link: "#" },
+    { id: 5, title: "Log In", link: "/login" },
+    { id: 6, title: "Sign Un", link: "/signUp" },
   ];
 
   return (

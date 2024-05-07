@@ -34,7 +34,7 @@ export function Module() {
     <div className="module">
       <div className="module__cards">
         {card.map((item) => (
-          <Card item={item} />
+          <Card item={item} key={item.id} />
         ))}
       </div>
     </div>

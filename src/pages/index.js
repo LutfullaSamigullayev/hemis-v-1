@@ -7,3 +7,5 @@ export { Timetable } from './timetable';
 export { Statistic } from './statistic';
 export { StudentCard } from './studentCard';
 export { Events } from './events';
+export { SignUp } from './signUp';
+export { Login } from './login';

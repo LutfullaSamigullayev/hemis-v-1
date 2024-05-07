@@ -8,12 +8,16 @@ import {
   Statistic,
   StudentCard,
   Events,
+  SignUp,
+  Login,
 } from "./pages";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/signUp" element={<SignUp />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/cabinet" element={<Cabinet />}>
         <Route path="/cabinet/home" element={<CabinetHome />} />
         <Route path="/cabinet/student" element={<Student />} />

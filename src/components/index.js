@@ -6,4 +6,4 @@ export { Button } from './button';
 export { Nav } from './nav';
 export { Top } from './top';
 export { Card } from './card';
-
+export { Event } from './event';

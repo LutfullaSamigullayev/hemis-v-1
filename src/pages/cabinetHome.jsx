@@ -1,26 +1,26 @@
 import { useState } from "react";
 
 export function CabinetHome() {
-  const staffRoom = [
-    {
-      id: 1,
-      title: "Adepoju Ademola ",
-      content: "Hello, Mr John i am yet to get your class b res...",
-      img: "/cabinet/staffRoom.png",
-    },
-    {
-      id: 2,
-      title: "Adepoju Ademola ",
-      content: "Hello, Mr John i am yet to get your class b res...",
-      img: "/cabinet/staffRoom.png",
-    },
-    {
-      id: 3,
-      title: "Adepoju Ademola ",
-      content: "Hello, Mr John i am yet to get your class b res...",
-      img: "/cabinet/staffRoom.png",
-    },
-  ];
+  // const staffRoom = [
+  //   {
+  //     id: 1,
+  //     title: "Adepoju Ademola ",
+  //     content: "Hello, Mr John i am yet to get your class b res...",
+  //     img: "/cabinet/staffRoom.png",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Adepoju Ademola ",
+  //     content: "Hello, Mr John i am yet to get your class b res...",
+  //     img: "/cabinet/staffRoom.png",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Adepoju Ademola ",
+  //     content: "Hello, Mr John i am yet to get your class b res...",
+  //     img: "/cabinet/staffRoom.png",
+  //   },
+  // ];
   const [product, setProduct] = useState([
     {
       id: 1,
