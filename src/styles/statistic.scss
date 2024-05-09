@@ -1,8 +1,7 @@
 .statistic {
-    width: 100%;
-    &__wrapper {
-        @include flex(center, center);
-        gap: 40px;
-        
-    }
+  width: 100%;
+  &__wrapper {
+    @include flex(center, center);
+    gap: 40px;
+  }
 }
