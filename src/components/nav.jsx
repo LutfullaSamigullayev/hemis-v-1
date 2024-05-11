@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useRef, useCallback } from "react";
 
 export function Nav() {
   const menuItem = [
@@ -10,6 +11,7 @@ export function Nav() {
     { id: 6, title: "Student Card", link: "/cabinet/student/card" },
     { id: 7, title: "Events", link: "/cabinet/events" },
   ];
+
   return (
     <div className="nav">
       <Link to="/" className="logo">
@@ -17,7 +19,7 @@ export function Nav() {
       </Link>
       <ul className="nav__menu">
         {menuItem.map((item) => (
-          <li>
+          <li key={item.id}>
             <Link className="menu_item" to={item.link}>
               {item.title}
             </Link>

@@ -22,11 +22,11 @@ export function Events() {
     <div className="events">
       events
       <ul>
-        {events.map((item) => {
-          <li>
-            <Event item={item} key={item.id} />;
-          </li>;
-        })}
+        {events.map((item) => (
+          <li key={item.id}>
+            <Event item={item} />
+          </li>
+        ))}
       </ul>
     </div>
   );

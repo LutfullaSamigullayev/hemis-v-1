@@ -23,13 +23,18 @@ export function Login() {
             />
           </div>
           <label htmlFor="username">Email</label>
-          <input
-            type="text"
-            placeholder="Enter Your Email"
-            name="Username"
-            id="Username"
-            required
-          />
+          <div className="input">
+            <div className="svg">
+              <Icons.password />
+            </div>
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              name="Username"
+              id="Username"
+              required
+            />
+          </div>
           <div className="submit">
             <Link to="/signUp">New Account ??</Link>
             <Button>LOGIN</Button>
