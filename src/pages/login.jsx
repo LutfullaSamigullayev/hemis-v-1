@@ -7,7 +7,7 @@ export function Login() {
         <img src="/header/logo.png" alt="logo" />
       </Link>
       <div className="register__wrapper">
-        <h1>REGISTER</h1>
+        <h1>Login</h1>
         <form action="" id="form" className="register__form">
           <label htmlFor="username">Username</label>
           <div className="input">
@@ -29,7 +29,7 @@ export function Login() {
             </div>
             <input
               type="text"
-              placeholder="Enter Your Email"
+              placeholder="Enter Your Password"
               name="Username"
               id="Username"
               required

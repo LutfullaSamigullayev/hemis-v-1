@@ -7,7 +7,7 @@ export function SignUp() {
         <img src="/header/logo.png" alt="logo" />
       </Link>
       <div className="register__wrapper">
-        <h1>REGISTER</h1>
+        <h1>Sign Up</h1>
         <form action="" id="form" className="register__form">
           <label htmlFor="username">Username</label>
           <input
