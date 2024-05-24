@@ -20,8 +20,7 @@ export function Events() {
   ]);
   return (
     <div className="events">
-      events
-      <ul>
+      <ul className="events__wrapper">
         {events.map((item) => (
           <li key={item.id}>
             <Event item={item} />
