@@ -4,9 +4,9 @@ import { Icons } from "../components";
 export function Header() {
   const menuItem = [
     { id: 1, title: "Home", link: "/" },
-    { id: 2, title: "About", link: "#" },
-    { id: 3, title: "Courses", link: "#" },
-    { id: 4, title: "Contact", link: "#" },
+    { id: 2, title: "About", link: "#about" },
+    { id: 3, title: "Courses", link: "#courses" },
+    { id: 4, title: "Contact", link: "#footer" },
     { id: 5, title: "Log In", link: "/login" },
     { id: 6, title: "Sign Un", link: "/signUp" },
   ];
@@ -21,9 +21,9 @@ export function Header() {
           <ul className="menu">
             {menuItem.map((item) => (
               <li>
-                <Link className="menu_item" to={item.link}>
+                <a className="menu_item" href={item.link}>
                   {item.title}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

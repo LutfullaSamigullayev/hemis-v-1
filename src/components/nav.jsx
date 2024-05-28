@@ -1,29 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useRef, useCallback } from "react";
 
 export function Nav() {
   const menuItem = [
-    { id: 1, title: "Home", link: "/cabinet/home" },
-    { id: 2, title: "Student", link: "/cabinet/student" },
-    { id: 3, title: "Module", link: "/cabinet/module" },
-    { id: 4, title: "Timetable", link: "/cabinet/timetable" },
-    { id: 5, title: "Statistic", link: "/cabinet/statistic" },
-    { id: 6, title: "Student Card", link: "/cabinet/student/card" },
-    { id: 7, title: "Events", link: "/cabinet/events" },
+    { title: "Home", link: "/cabinet/home", key: "home" },
+    { title: "Student", link: "/cabinet/student", key: "student" },
+    { title: "Module", link: "/cabinet/module", key: "module" },
+    { title: "Timetable", link: "/cabinet/timetable", key: "timetable" },
+    { title: "Statistic", link: "/cabinet/statistic", key: "statistic" },
+    { title: "Student Card", link: "/cabinet/student/card", key: "card" },
+    { title: "Events", link: "/cabinet/events", key: "events" },
   ];
+
+  const currentPath = useLocation().pathname.split("/").pop();
 
   return (
     <div className="nav">
       <Link to="/" className="logo">
         <img src="/header/logo.png" alt="logo" />
       </Link>
-      <ul className="nav__menu">
+      <ul className="nav__menu active">
         {menuItem.map((item) => (
-          <li key={item.id}>
-            <Link className="menu_item" to={item.link}>
+          <Link className="menu_item" to={item.link}>
+            <li
+              key={item.key}
+              className={currentPath == item.key ? "active" : ""}
+            >
               {item.title}
-            </Link>
-          </li>
+            </li>
+          </Link>
         ))}
       </ul>
       <Link to="/" className="singout">

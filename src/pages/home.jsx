@@ -30,7 +30,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <div className="about">
+      <div id="about" className="about">
         <div className="container">
           <div className="about__wrapper">
             <div className="about__left">
@@ -49,7 +49,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <div className="courses">
+      <div id="courses" className="courses">
         <div className="container">
           <div className="courses__wrapper">
             <div className="courses__content">
@@ -65,7 +65,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <div className="prize">
+      <div id="prize" className="prize">
         <div className="container">
           <div className="prize__wrapper">
             <div className="prize__left">

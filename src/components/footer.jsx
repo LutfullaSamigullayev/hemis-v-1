@@ -4,7 +4,7 @@ import { Button } from "./button";
 
 export function Footer() {
   return (
-    <div className="footer">
+    <div id="footer" className="footer">
       <div className="container">
         <div className="footer__wrapper">
           <div className="search">
