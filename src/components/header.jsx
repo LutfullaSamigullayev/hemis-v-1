@@ -6,9 +6,10 @@ export function Header() {
     { id: 1, title: "Home", link: "/" },
     { id: 2, title: "About", link: "#about" },
     { id: 3, title: "Courses", link: "#courses" },
-    { id: 4, title: "Contact", link: "#footer" },
-    { id: 5, title: "Log In", link: "/login" },
-    { id: 6, title: "Sign Un", link: "/signUp" },
+    // { id: 4, title: "Prize", link: "#prize" },
+    { id: 5, title: "Contact", link: "#footer" },
+    { id: 6, title: "Log In", link: "/login" },
+    { id: 7, title: "Sign Up", link: "/signUp" },
   ];
 
   return (
