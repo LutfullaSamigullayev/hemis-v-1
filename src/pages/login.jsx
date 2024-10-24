@@ -1,6 +1,31 @@
 import { Link } from "react-router-dom";
 import { Icons, Button } from "../components";
+import { users } from "../data/users";
+import { useState } from "react";
+
 export function Login() {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  function checkUser(e) {
+    e.preventDefault();
+
+    const email = e.target.querySelector("#email").value;
+    const password = e.target.querySelector("#password").value;
+
+    const user = users.find((user) => user.email == email);
+
+    if (!user) {
+      setError(true);
+    } else {
+      if (user.password != password) {
+        setError(true);
+      } else {
+        setSuccess(true);
+      }
+    }
+  }
+
   return (
     <div className="register login">
       <Link to="/" className="logo absolute">
@@ -8,7 +33,20 @@ export function Login() {
       </Link>
       <div className="register__wrapper">
         <h1>Login</h1>
-        <form action="" id="form" className="register__form">
+
+        {success && (
+          <>
+            <h1>Success</h1>
+          </>
+        )}
+
+        {error && (
+          <>
+            <h1>Error</h1>
+          </>
+        )}
+
+        <form id="form" className="register__form" onSubmit={checkUser}>
           <label htmlFor="username">Username</label>
           <div className="input">
             <div className="svg">
@@ -17,8 +55,8 @@ export function Login() {
             <input
               type="text"
               placeholder="Enter Your Email"
-              name="Username"
-              id="Username"
+              name="email"
+              id="email"
               required
             />
           </div>
@@ -30,8 +68,8 @@ export function Login() {
             <input
               type="text"
               placeholder="Enter Your Password"
-              name="Username"
-              id="Username"
+              name="password"
+              id="password"
               required
             />
           </div>
