@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { Card } from "../components";
 
 export function Module() {
-  const [card, setCard] = useState([
+  const card = [
     {
       id: 1,
       image: "/card/1.jpg",
@@ -28,7 +27,7 @@ export function Module() {
       image: "/card/5.jpg",
       title: "CYBER SECURITY",
     },
-  ]);
+  ];
 
   return (
     <div className="module">

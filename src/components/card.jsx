@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function Card({ item }) {
   return (
     <div className="card">
@@ -10,3 +12,10 @@ export function Card({ item }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  item: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+};

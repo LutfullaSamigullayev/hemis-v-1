@@ -1,4 +1,5 @@
 import { Button } from "./button";
+import PropTypes from "prop-types";
 
 export function Event({ item }) {
   return (
@@ -11,3 +12,10 @@ export function Event({ item }) {
     </div>
   );
 }
+
+Event.propTypes = {
+  item: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    data: PropTypes.string.isRequired,
+  }).isRequired,
+};

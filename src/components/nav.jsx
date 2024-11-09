@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useRef, useCallback } from "react";
 
 export function Nav() {
   const menuItem = [
@@ -21,7 +20,7 @@ export function Nav() {
       </Link>
       <ul className="nav__menu active">
         {menuItem.map((item) => (
-          <Link className="menu_item" to={item.link}>
+          <Link className="menu_item" to={item.link} key={item.key}>
             <li
               key={item.key}
               className={currentPath == item.key ? "active" : ""}

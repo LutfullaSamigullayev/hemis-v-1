@@ -21,7 +21,7 @@ export function Header() {
           </Link>
           <ul className="menu">
             {menuItem.map((item) => (
-              <li>
+              <li key={item.id}>
                 <a className="menu_item" href={item.link}>
                   {item.title}
                 </a>

@@ -1,13 +1,12 @@
-import { useState } from "react";
 import { Header, Button, Footer, Copyright, Icons } from "../components";
 
 export function Home() {
-  const [bannerInfo, setbannerInfo] = useState([
+  const bannerInfo = [
     { id: 1, title: "Coure to choose from", number: "80+" },
     { id: 2, title: "Years of experience", number: "40" },
     { id: 3, title: "Highest grade at MEC", number: "10/10" },
     { id: 4, title: "Graduated students", number: "50.000" },
-  ]);
+  ];
 
   return (
     <>
@@ -19,7 +18,7 @@ export function Home() {
             <ul>
               {bannerInfo.map((item, index) => (
                 <>
-                  <li>
+                  <li key={item.id}>
                     <span>{item.number}</span>
                     <h3>{item.title}</h3>
                   </li>

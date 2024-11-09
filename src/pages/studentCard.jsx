@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export function StudentCard() {
   // const [idCard, setIdCard] = useState([
   //   {

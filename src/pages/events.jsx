@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { Event } from "../components";
 export function Events() {
-  const [events, setEvents] = useState([
+  const events = [
     {
       id: 1,
       title: "Leadership Event",
@@ -17,7 +16,7 @@ export function Events() {
       title: "Behavior Learning in Institution",
       data: "24 June",
     },
-  ]);
+  ];
   return (
     <div className="events">
       <ul className="events__wrapper">

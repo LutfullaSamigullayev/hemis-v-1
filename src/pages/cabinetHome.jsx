@@ -1,7 +1,5 @@
-import { useState } from "react";
-
 export function CabinetHome() {
-  const [product, setProduct] = useState([
+  const product = [
     {
       id: 1,
       title: "Adepoju Ademola ",
@@ -20,7 +18,7 @@ export function CabinetHome() {
       content: "Hello, Mr John i am yet to get your class b res...",
       img: "/cabinet/staffRoom.png",
     },
-  ]);
+  ];
 
   return (
     <div className="cabinetHome">
@@ -44,7 +42,7 @@ export function CabinetHome() {
           <h3 className="title">Staff Room</h3>
           <ul>
             {product.map((item) => (
-              <li>
+              <li key={item.id}>
                 <div className="border"></div>
                 <div className="item">
                   <img src={item.img} alt={item.title} />
@@ -61,7 +59,7 @@ export function CabinetHome() {
           <h3 className="title">Staff Room</h3>
           <ul>
             {product.map((item) => (
-              <li>
+              <li key={item.id}>
                 <div className="border"></div>
                 <div className="item">
                   <img src={item.img} alt={item.title} />
