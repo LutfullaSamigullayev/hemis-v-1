@@ -35,7 +35,7 @@ export function Copyright() {
                 3471-3800
               </p>
             </div>
-            <div className="item">
+            <div className="item item2">
               <p>
                 Rua Paulo Malschitzki, 10 Zona Industrial Norte Joinville SC
                 89219-710 Razão Social: Fundação Educacional da Região de

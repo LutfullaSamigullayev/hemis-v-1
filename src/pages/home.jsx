@@ -10,30 +10,34 @@ export function Home() {
 
   return (
     <>
-      <div className="banner">
-        <Header />
+      <Header />
+
+      <div id="home" className="banner">
         <div className="container">
           <h1 className="banner__title">UNIVILLE GRADUATION</h1>
           <div className="banner__info">
             <ul>
               {bannerInfo.map((item, index) => (
-                <>
-                  <li key={item.id}>
+                <li key={item.id}>
+                  <div>
                     <span>{item.number}</span>
                     <h3>{item.title}</h3>
-                  </li>
-                  {index + 1 !== bannerInfo.length ? <div></div> : null}
-                </>
+                  </div>
+                  {index + 1 !== bannerInfo.length && (
+                    <div className="line"></div>
+                  )}
+                </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
+
       <div id="about" className="about">
         <div className="container">
           <div className="about__wrapper">
             <div className="about__left">
-              <img src="/about.jpg" alt="" />
+              <img src="/about.jpg" alt="about" />
             </div>
             <div className="about__rigth">
               <h2>ABOUT UNIVILLE</h2>
@@ -48,6 +52,7 @@ export function Home() {
           </div>
         </div>
       </div>
+
       <div id="courses" className="courses">
         <div className="container">
           <div className="courses__wrapper">
@@ -64,6 +69,7 @@ export function Home() {
           </div>
         </div>
       </div>
+
       <div id="prize" className="prize">
         <div className="container">
           <div className="prize__wrapper">

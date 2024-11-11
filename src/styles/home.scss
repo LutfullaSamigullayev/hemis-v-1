@@ -7,10 +7,39 @@
   line-height: 40px;
   border-radius: 8px;
   width: fit-content;
+  @media only screen and (max-width: 1024px) {
+    padding: 4px 20px;
+    font-size: 14px;
+    line-height: 36px;
+
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 4px 16px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  @media only screen and (max-width: 428px) {
+    padding: 4px 8px;
+    font-size: 10px;
+    line-height: 26px;
+  }
 }
 
 .banner {
+  background-image: url("/header/header.jpg");
+  background-position: center;
+  background-size: cover;
+  height: fit-content;
   padding: 80px 0;
+  @media only screen and (max-width: 1024px) {
+    padding: 40px 0;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px 0;
+  }
+  @media only screen and (max-width: 428px) {
+    padding: 10px 0;
+  }
   &__title {
     font-size: 38px;
     font-weight: 700;
@@ -20,52 +49,109 @@
     @include flex(center, center);
     text-shadow: 4px;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    @media only screen and (max-width: 1024px) {
+      font-size: 28px;
+      margin-top: 150px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 18px;
+      margin-top: 100px;
+    }
+    @media only screen and (max-width: 428px) {
+      font-size: 16px;
+      margin-top: 50px;
+    }
   }
   &__info {
     margin-top: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    @media only screen and (max-width: 1024px) {
+      margin-top: 150px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 100px;
+    }
+    @media only screen and (max-width: 428px) {
+      margin-top: 50px;
+    }
     ul {
       display: flex;
-      gap: 30px;
+      gap: 15px;
       padding: 18px 36px;
       border-radius: 10px;
       background-color: black;
       color: white;
-
+    @media only screen and (max-width: 1024px) {
+      gap: 10px;
+      padding: 10px 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 5px;
+      padding: 8px 16px;
+    }
+    @media only screen and (max-width: 428px) {
+      gap: 4px;
+      padding: 6px 12px;
+    }
       li {
-        // position: relative;
-        width: 90px;
+        width: 100px;
         text-align: center;
         font-weight: 400;
-        // margin-inline: 30px;
-
-        // &:last-of-type::after {
-        //     content: none;
-        // }
-
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     right: -30px;
-        //     width: 1px;
-        //     height: 60px;
-        //     background-color: white;
-        // }
-
-        span {
+        display: flex;
+        gap: 15px;
+        @media only screen and (max-width: 1024px) {
+          width: 80px;
+          gap: 10px;
+        }
+        @media only screen and (max-width: 768px) {
+          width: 70px;
+          gap: 5px;
+        }
+        @media only screen and (max-width: 428px) {
+          gap: 4px;
+          width: 60px;
+        }
+       span {
           font-size: 30px;
+          @media only screen and (max-width: 1024px) {
+            font-size: 20px;
+          }
+          @media only screen and (max-width: 768px) {
+            font-size: 16px;
+          }
+          @media only screen and (max-width: 428px) {
+            font-size: 14px;
+          }
         }
         h3 {
           font-size: 12px;
+          @media only screen and (max-width: 1024px) {
+            font-size: 10px;
+          }
+          @media only screen and (max-width: 768px) {
+            font-size: 8px;
+          }
+          @media only screen and (max-width: 428px) {
+            font-size: 7px;
+          }
         }
-      }
-      div {
-        height: 60px;
-        border: 1px solid white;
+
+        .line {
+          height: 60px;
+          border: 1px solid white;
+          @media only screen and (max-width: 1024px) {
+            height: 50px;
+          }
+          @media only screen and (max-width: 768px) {
+            height: 40px;
+          }
+          @media only screen and (max-width: 428px) {
+            height: 35px;
+          }
+         
+        }
       }
     }
   }
@@ -74,76 +160,234 @@
 .about {
   padding: 80px 0;
   font-size: 32px;
-
+  @media only screen and (max-width: 1024px) {
+    padding: 40px 0;
+    font-size: 24px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px 0;
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 428px) {
+    padding: 10px 0;
+    font-size: 16px;
+  }
   &__wrapper {
-    @include flex(center);
-    gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    @media only screen and (max-width: 1024px) {
+      gap: 30px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 15px;
+    }
+    @media only screen and (max-width: 428px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 10px;
+    }
   }
   &__left {
+    overflow: hidden;
     img {
+      width: 100%;
+      height: 100%;
       border-radius: 8px;
+      object-fit: cover;
+      object-position: center;
+      @media only screen and (max-width: 428px) {
+        max-height: 200px;
+      }
     }
   }
   &__rigth {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    gap: 20px;
+    @media only screen and (max-width: 1024px) {
+      gap: 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 10px;
+    }
+    @media only screen and (max-width: 428px) {
+      gap: 6px;
+    }
   }
 }
+
 .courses {
   padding: 80px 0;
   background-color: #f0efef;
+  @media only screen and (max-width: 1024px) {
+    padding: 40px 0;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px 0;
+  }
+  @media only screen and (max-width: 428px) {
+    padding: 10px 0;
+  }
   &__wrapper {
-    @include flex(center, flex-start);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media only screen and (max-width: 428px) {
+      padding: 10px 0;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
   }
   &__content {
     color: #3b3b3b;
     font-weight: 700;
-
     @include flex(flex-start, center);
     flex-direction: column;
     gap: 30px;
+    @media only screen and (max-width: 1024px) {
+      align-items: center;
+      grid-column: span 3 / span 3;
+      gap: 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 10px;
+    }
+    @media only screen and (max-width: 428px) {
+      gap: 6px;
+    }
     h1 {
       font-size: 51px;
+      @media only screen and (max-width: 1024px) {
+        font-size: 40px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 30px;
+      }
+      @media only screen and (max-width: 428px) {
+        font-size: 24px;
+        text-align: center;
+      }
     }
     p {
       font-size: 25px;
+      @media only screen and (max-width: 1024px) {
+        font-size: 20px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+      @media only screen and (max-width: 428px) {
+        font-size: 16px;
+        text-align: center;
+      }
     }
     h3 {
       font-size: 32px;
+      @media only screen and (max-width: 1024px) {
+        font-size: 28px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+      @media only screen and (max-width: 428px) {
+        font-size: 18px;
+      }
     }
   }
   &__img {
-    @include flex();
+    grid-column: span 3 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
+    overflow: hidden;
+    @media only screen and (max-width: 1024px) {
+      gap: 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 10px;
+      
+    }
+    @media only screen and (max-width: 428px) {
+      gap: 6px;
+    grid-column: 1;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
     img {
-      width: 300px;
+      width: 100%;
       height: 350px;
-      object-fit: cover;
       border-radius: 8px;
+      object-fit: cover;
+      object-position: center;
+      @media only screen and (max-width: 1024px) {
+        height: 300px
+      }
+      @media only screen and (max-width: 768px) {
+        height: 250px;
+      }
+      @media only screen and (max-width: 428px) {
+        height: 200px;
+      }
     }
   }
 }
 
 .prize {
   padding: 80px 0;
+  @media only screen and (max-width: 1024px) {
+    padding: 40px 0;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px 0;
+  }
+  @media only screen and (max-width: 428px) {
+    padding: 10px 0;
+  }
   &__wrapper {
-    @include flex(center, space-between);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
   }
   &__left {
-    padding: 80px;
-    flex: 1 1 auto;
+    @include flex(center, center);
     flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    @media only screen and (max-width: 1024px) {
+      gap: 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 10px;
+    }
+    @media only screen and (max-width: 428px) {
+      gap: 6px;
+    }
   }
   &__person {
     @include flex(center);
-    margin-top: 70px;
     gap: 20px;
+    @media only screen and (max-width: 1024px) {
+      gap: 16px;
+    }
+    @media only screen and (max-width: 768px) {
+      gap: 12px;
+    }
+    @media only screen and (max-width: 428px) {
+      gap: 8px;
+    }
     .person__img {
       position: relative;
       width: 120px;
       height: 120px;
-
+      @media only screen and (max-width: 428px) {
+        width: 80px;
+        height: 80px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -154,6 +398,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
+       
       }
     }
     .person__name {
@@ -162,6 +407,7 @@
         font-size: 24px;
       }
       p {
+        text-align: left;
         margin-top: 20px;
         font-size: 15px;
         font-weight: 400;
@@ -170,9 +416,20 @@
     }
   }
   &__rigth {
+    
     img {
-      width: 510px;
-      height: 590px;
+      width: 100%;
+      height: 500px;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: top;
+      @media only screen and (max-width: 1024px) {
+        height: 400px
+      }
+      
+      @media only screen and (max-width: 428px) {
+        height: 300px;
+      }
     }
   }
 }
