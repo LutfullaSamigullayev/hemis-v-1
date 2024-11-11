@@ -1,7 +1,93 @@
-.statistic {
+.statistic-container {
+  display: flex;
+  padding: 20px;
+}
+
+.bar-chart {
+  flex: 1;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-inner {
+  width: 30px;
+  background-color: black;
+  transition: height 0.3s;
+}
+
+.bar-label {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.progress-list {
+  flex: 0.5;
+  margin-left: 20px;
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  flex: 1;
+}
+
+.progress-circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.circular-chart {
   width: 100%;
-  &__wrapper {
-    @include flex(center, center);
-    gap: 40px;
-  }
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 2.8;
+}
+
+.circle {
+  fill: none;
+  stroke: #666;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s;
+}
+
+.progress-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #666;
 }

@@ -1,3 +1,37 @@
-.timetable {
+.schedule-container {
     width: 100%;
-}
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .schedule-table th {
+    background-color: #3a3a4a;
+    color: white;
+  }
+  
+  .schedule-table .highlight {
+    background-color: #e57373; /* Sunday highlight color */
+  }
+  
+  .schedule-table .time-column {
+    background-color: #80cbc4;
+    font-weight: bold;
+  }
+  
+  .schedule-cell {
+    background-color: #f7f7f7;
+    height: 40px;
+  }
+  
